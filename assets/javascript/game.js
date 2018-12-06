@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     // Array of crystal images.
     var crystalImages = [
@@ -10,10 +10,11 @@ $(document).ready(function(){
 
 
     // Generates a random number and prints it to the DOM.
-    var randomNumber = Math.floor(Math.random()*100);
+    var randomNumber = Math.floor(Math.random() * 100);
     $(".numberDiv").text(randomNumber);
 
-    for ( i=0; i < crystalImages.length; i++){
+    // Grabs an image for the crystalImages array and prints it to the DOM
+    for (i = 0; i < crystalImages.length; i++) {
         var crystal = $("<img>");
         crystal.attr("src", crystalImages[i]);
         $(".crystalsDiv").append(crystal);
