@@ -17,7 +17,11 @@ $(document).ready(function () {
     // Holds the number of losses.
     var losses = 0;
 
-
+    function resetCrystals(){
+        for (i = 0; i < crystalImages.length; i++) {
+            $("#gameCrystal"+ [i]).attr("crystalValue", Math.floor(Math.random() * 14) + 1);
+        }
+    };
 
     // Generates a random number between 50 and 100 and prints it to the DOM.
     function generateRandomNumber() {
@@ -31,6 +35,7 @@ $(document).ready(function () {
         var crystal = $("<img>");
         crystal.attr("src", crystalImages[i]);
         crystal.attr("class", "gameCrystal");
+        crystal.attr("id", "gameCrystal" + [i]);
         $(".crystalsDiv").append(crystal);
 
         // gets a random number between 1 and 15 for each crystal.
@@ -61,7 +66,7 @@ $(document).ready(function () {
             $(".wins").text(wins);
             gameScore = 0;
             $(".currentScoreDiv").text(gameScore);
-            generateCrystalNumber();
+            resetCrystals();
             generateRandomNumber();
         // If the gameScore goes over the number to guess...
         } else if (gameScore > randomNumber) {
@@ -71,7 +76,7 @@ $(document).ready(function () {
             $(".losses").text(losses);
             gameScore = 0;
             $(".currentScoreDiv").text(gameScore);
-            generateCrystalNumber();
+            resetCrystals();
             generateRandomNumber();
         }
     });
