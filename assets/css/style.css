@@ -2,14 +2,26 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
     margin: 10px;
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/textured_paper.png");
 }
 
 h1 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 p {
     margin-bottom: 20px;
+}
+
+.container {
+    margin: 20px 5% 0px 5%;
+    background-color: white;
+    padding: 20px;
+}
+
+.instructions{
+    width: 50%;
 }

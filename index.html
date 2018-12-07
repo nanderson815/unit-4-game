@@ -13,41 +13,50 @@
 </head>
 
 <body>
-    <header>
-        <h1>Crystals Collector!</h1>
-    </header>
-
-    <body>
-        <div>
-            <p>
-                You will be given a random number at the start of the game.
-            </p>
-            <p>
-                There are four crystals below. By clicking on a crystal, you will add a specific amount of points to
-                your score.
-            </p>
-            <p>
-                You win if your total score matches the random number from the beginning of the game. You will lose if
-                your score goes over the random number!
-            </p>
-            <p>
-                The value of each crystal is hidden from you until you click it.
-            </p>
-            <p>
-                Each time the game starts, the vlaue of the crystals will change!
-
-            </p>
-        </div>
-        <div class="numberDiv"></div>
-        <div class="scoreDiv"></div>
-        <div class="crystalsDiv"></div>
+    <div class="container">
+        <header>
+            <h1>Crystals Collector!</h1>
+        </header>
 
         <div>
-            <p>Your Current Score is:</p>
-        </div>
-        <div class="currentScoreDiv"></div>
+            <div>
+                <p>
+                    You will be given a random number at the start of the game.
+                </p>
+                <p>
+                    There are four crystals below. By clicking on a crystal, you will add a specific amount of points
+                    to
+                    your score.
+                </p>
+                <p>
+                    You win if your total score matches the random number from the beginning of the game. You will lose
+                    if
+                    your score goes over the random number!
+                </p>
+                <p>
+                    The value of each crystal is hidden from you until you click it.
+                </p>
+                <p>
+                    Each time the game starts, the vlaue of the crystals will change!
 
-    </body>
+                </p>
+            </div>
+            <div class="scoreBoard">
+               <p> Wins: <span class="wins">0</span></p>
+                <p> Losses: <span class="losses">0</span></p>
+            </div>
+            <div class="numberDiv"></div>
+
+            <div class="crystalsDiv"></div>
+
+            <div>
+                <p>Your Current Score is:</p>
+            </div>
+            <h2 class="currentScoreDiv"> 0 </h2>
+
+            </dvi>
+        </div>
+    </div>
 </body>
 
 </html>
