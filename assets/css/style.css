@@ -22,6 +22,14 @@ p {
     padding: 20px;
 }
 
+.flexContainer {
+    display: flex;
+}
+
 .instructions{
-    width: 50%;
+    flex-basis: 75%;
+}
+
+.scoreBoard {
+    flex-basis: 25%;
 }
