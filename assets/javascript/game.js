@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // Array of crystal images.
+    // Array of crystal images to be printed to the DOM.
     var crystalImages = [
         "assets/images/bluecrystal.png",
         "assets/images/greenCrystal.png",
@@ -8,9 +8,13 @@ $(document).ready(function () {
         "assets/images/redcrystal.png"
     ];
 
+    // Holds the sum of the clicked crystals
     var gameScore = 0;
+    // Holds the number to match.
     var randomNumber = 0;
+    // Holds the number of wins.
     var wins = 0;
+    // Holds the number of losses.
     var losses = 0;
 
 
@@ -22,7 +26,7 @@ $(document).ready(function () {
     }
     generateRandomNumber();
 
-    // Grabs an image for the crystalImages array and prints it to the DOM
+    // Grabs an image for the 4 crystalImages array and prints it to the DOM
     for (i = 0; i < crystalImages.length; i++) {
         var crystal = $("<img>");
         crystal.attr("src", crystalImages[i]);
@@ -37,15 +41,21 @@ $(document).ready(function () {
         generateCrystalNumber();
     }
 
+    // Event listener on the crystals for a click.
     $(".gameCrystal").on("click", function () {
 
+        // If the score is less then the number to be guessed...
         if (gameScore < randomNumber) {
+            // store the crystal value in CrystalScore
             var crystalScore = $(this).attr('crystalValue');
+            // Convert from string to Int, and add to gameScore.
             gameScore = gameScore + parseInt(crystalScore);
+            // Print game score tot he DOM.
             $(".currentScoreDiv").text(gameScore);
         }
-
+        // If the score equals the number to guess...
         if (gameScore === randomNumber) {
+            // alert you win, increase the wins, and reset the game.
             alert("You Win!")
             wins++;
             $(".wins").text(wins);
@@ -53,8 +63,9 @@ $(document).ready(function () {
             $(".currentScoreDiv").text(gameScore);
             generateCrystalNumber();
             generateRandomNumber();
-
+        // If the gameScore goes over the number to guess...
         } else if (gameScore > randomNumber) {
+            // Alert you lose, increase losses, reset the game. 
             alert("You Lose!");
             losses++;
             $(".losses").text(losses);

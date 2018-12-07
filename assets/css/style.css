@@ -6,7 +6,14 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
@@ -27,9 +34,22 @@ p {
 }
 
 .instructions{
-    flex-basis: 75%;
+    flex-basis: 60%;
+    padding-left: 5%;
 }
 
 .scoreBoard {
-    flex-basis: 25%;
+    flex-basis: 40%;
+}
+
+#scores {
+    padding-left: 30%;
+}
+
+.crystalsDiv {
+    text-align: center;
+}
+
+.gameCrystal {
+    margin:0px 10px;
 }
