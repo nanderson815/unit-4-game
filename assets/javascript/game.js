@@ -19,13 +19,13 @@ $(document).ready(function () {
     // Function to change the crystal values. Called at the end of the game.  
     function resetCrystals(){
         for (i = 0; i < crystalImages.length; i++) {
-            $("#gameCrystal"+ [i]).attr("crystalValue", Math.floor(Math.random() * 14) + 1);
+            $("#gameCrystal"+ [i]).attr("crystalValue", Math.floor(Math.random() * 11) + 1);
         }
     };
 
-    // Generates a random number between 50 and 100 and prints it to the DOM.
+    // Generates a random number between 19 and 120 and prints it to the DOM.
     function generateRandomNumber() {
-        randomNumber = Math.floor(Math.random() * 50) + 50;
+        randomNumber = Math.floor(Math.random() * 101) + 19;
         $(".numberDiv").text(randomNumber);
     }
     generateRandomNumber();
@@ -38,8 +38,8 @@ $(document).ready(function () {
         crystal.attr("id", "gameCrystal" + [i]);
         $(".crystalsDiv").append(crystal);
 
-        // gets a random number between 1 and 15 for each crystal.
-            var crystalValue = Math.floor(Math.random() * 14) + 1;
+        // gets a random number between 1 and 12 for each crystal.
+            var crystalValue = Math.floor(Math.random() * 11) + 1;
             crystal.attr("crystalValue", crystalValue);
     }
 
