@@ -16,7 +16,7 @@ $(document).ready(function () {
     var wins = 0;
     // Holds the number of losses.
     var losses = 0;
-
+    // Function to change the crystal values. Called at the end of the game.  
     function resetCrystals(){
         for (i = 0; i < crystalImages.length; i++) {
             $("#gameCrystal"+ [i]).attr("crystalValue", Math.floor(Math.random() * 14) + 1);
@@ -39,11 +39,8 @@ $(document).ready(function () {
         $(".crystalsDiv").append(crystal);
 
         // gets a random number between 1 and 15 for each crystal.
-        function generateCrystalNumber() {
             var crystalValue = Math.floor(Math.random() * 14) + 1;
             crystal.attr("crystalValue", crystalValue);
-        }
-        generateCrystalNumber();
     }
 
     // Event listener on the crystals for a click.
